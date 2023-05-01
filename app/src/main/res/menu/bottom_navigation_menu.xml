@@ -4,22 +4,21 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@drawable/home"
-
-        android:title="TODO" />
+        android:icon="@drawable/home_tab_icon"
+        android:title="Home" />
     <item
-        android:id="@+id/ahadeth"
-        android:icon="@drawable/categories"
+        android:id="@+id/category"
+        android:icon="@drawable/categories_tab_icon"
 
-        android:title="TODO" />
+        android:title="Categories" />
     <item
-        android:id="@+id/tasbeeh"
-        android:icon="@drawable/wishlist"
-        android:title="TODO" />
+        android:id="@+id/wishlist"
+        android:icon="@drawable/wishlist_tab_icon"
+        android:title="Wishlist" />
     <item
-        android:id="@+id/radio"
-        android:icon="@drawable/account"
+        android:id="@+id/account"
+        android:icon="@drawable/account_tab_icon"
 
-        android:title="TODO" />
+        android:title="Account" />
 
 </menu>

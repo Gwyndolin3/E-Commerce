@@ -11,46 +11,36 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.e_commerceapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HostActivity : AppCompatActivity() {
 
 
     lateinit var navController: NavController
     lateinit var bottomnavigationView: BottomNavigationView
-    lateinit var appBarConfiguration: AppBarConfiguration
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_host)
         navController = findNavController(R.id.fragment)
-
         bottomnavigationView = findViewById(R.id.bottom_navigation_view)
-
-
         bottomnavigationView.setupWithNavController(navController)
 
-val appBarConfiguration = AppBarConfiguration(setOf(
-    R.id.homeFragment
-     // When you make a fragment, add it here
-    // Fragment 2
-    // Fragment 3
-    // Fragment 4
-))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.homeFragment
+                // When you make a fragment, add it here
+                // Fragment 2
+                // Fragment 3
+                // Fragment 4
+            )
+        )
 
 
 
-        setupActionBarWithNavController(navController,appBarConfiguration)
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
-
-
-
-
-        }
-
+    }
     override fun onSupportNavigateUp(): Boolean {
 
         val navController = findNavController(R.id.fragment)
